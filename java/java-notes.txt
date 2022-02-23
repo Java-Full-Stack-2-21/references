@@ -1,0 +1,12 @@
+What is Java?
+	object oriented programming based in C and maintained by oracle
+
+Why use Java?
+	- Large community
+	- Free
+	- high level
+	- platform agnostic
+
+What is the minimum requirement to run java programs?
+	JRE - Java Runtime Environment
+
