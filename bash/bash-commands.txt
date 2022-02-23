@@ -12,4 +12,5 @@ Common Bash Commands:
 	- cat: displays contents of a file
 	- mv: moves file to a different location
 What is a environment variable?
+	a value that is saved on your machine that can be accessed when needed
 	
