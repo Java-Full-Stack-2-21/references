@@ -1,0 +1,28 @@
+What is oop? (Object Oriented Programming)
+    OOP is a programming ideology in which we reference "objects" to reference real world objects
+
+What are the 4 pillars of OOP?
+    - Inheritance
+        Inheritance is the concept of passing state/behavior from a parent class to a child class
+        - Example: DNA, you are passed DNA from your parents
+        - How do we achieve this in java?
+            We utilize the extends keyword on a class. (NOTE: We can only extend one class)
+    - Abstraction
+        abstraction is the idea of hiding how something is done.
+        Example: A car. We dont know how a car accelerates, the car just goes when I hit the pedal.
+        Where do we see abstraction in java?
+            - interfaces
+            - abstract classes
+    - Encapsulation
+        encapsulation is the restriction of direct access.
+        Example:
+            - Vending machine... you dont get the snickers, the machine does for you.
+        Where do we see this in java?
+            - with the use of access modifiers
+                - public, private, default, protected
+    - Polymorphism
+        Polymorphism is the idea of taking on many forms.
+        Example: Water... water can act differently depending on temperature and shape
+        Where do we see polymorphism in Java?
+            - overriding: method with the same method signature as a method in the same class
+            - overloading: a method has the same name as another method in the class but with different parameters
