@@ -1,8 +1,15 @@
 package codingchallenges.starpyramid;
 
+
+import codingchallenges.sorting.*;
+import nonaccessmodifiers.StaticClass;
+
 public class MainDriver {
     public static void main(String[] args) {
         starTree(5);
+
+        Sort sort = new Sort();
+        StaticClass sc = new StaticClass();
     }
 
     static void starTree(int num){
