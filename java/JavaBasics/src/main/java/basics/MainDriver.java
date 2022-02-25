@@ -168,6 +168,7 @@ public class MainDriver {
         int[] arr = {32,76,41,6,9};
         int[] arr2 = new int[99];
 
+
         /*
         * java has default values for instance variables and array initializations
         * int is 0, doubles are 0.0D, floats are 0.0F, longs are 0L, byte is 0, char is an empty character
