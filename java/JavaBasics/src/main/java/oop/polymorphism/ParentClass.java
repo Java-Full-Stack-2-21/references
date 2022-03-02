@@ -9,9 +9,11 @@ package oop.polymorphism;
 *
 * */
 public class ParentClass {
-    Integer age;
-    String firstname;
-    String lastname;
+    Integer age = 99;
+    String firstname = "Old";
+    String lastname = "Fart";
+
+    public ParentClass(){}
 
     public ParentClass(Integer age, String firstname, String lastname){
         this.age = age;
