@@ -4,6 +4,7 @@ import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.BeforeAll;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
+import org.mockito.Mockito;
 
 import static org.junit.jupiter.api.Assertions.*;
 
@@ -26,13 +27,18 @@ import static org.junit.jupiter.api.Assertions.*;
 *   - @BeforeEach: this will run before an individual test is ran
 *   - @AfterAll: this will run after the entire test suite is ran
 *   - @AfterEach: this will run after each individual test case.
+*
+*
+* Mockito allows to mock the returns of methods without actually calling those methods
+* - spy: partially marks the object
+* - mock: fully mocks the object
 * */
 class PigLatinTest {
 
     PigLatin pigLatin;
 
     public PigLatinTest(){
-        pigLatin = new PigLatin();
+        pigLatin = Mockito.spy(PigLatin.class);
     }
 
     /*@BeforeAll
@@ -50,7 +56,7 @@ class PigLatinTest {
         //arrange - where we do the setup for our test
         String initialSentence = "Hello my name is Kevin";
         String expectedOutput = "elloHay ymay amenay siay evinKay";
-
+        Mockito.when(pigLatin.isValidSentence(initialSentence)).thenReturn(true);
 
         //act - where we call the method with the initial sentence
         String actualOutput = pigLatin.encrypt(initialSentence);
@@ -61,6 +67,15 @@ class PigLatinTest {
 
     @Test
     void encryptWithInvalidSentence(){
+        //arrange
+        String initialSentence = "Hello my name is Ke!vin";
+        String expectedOutput = "invalid sentence";
+        Mockito.when(pigLatin.isValidSentence(initialSentence)).thenReturn(false);
 
+        //act
+        String actualOutput = this.pigLatin.encrypt(initialSentence);
+
+        //assert
+        Assertions.assertEquals(expectedOutput, actualOutput);
     }
 }

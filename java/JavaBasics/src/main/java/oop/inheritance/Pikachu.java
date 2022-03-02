@@ -18,7 +18,6 @@ public class Pikachu extends Pokemon{
 
     //constructors have the "super();" on the first line implicitly
     Pikachu(){
-
         System.out.println("Health: " + this.health);
 
         this.takeDamage();
@@ -26,7 +25,7 @@ public class Pikachu extends Pokemon{
 
 
     Pikachu(Integer id, String name, Integer health){
-        this();
+        super();
     }
 
 }
