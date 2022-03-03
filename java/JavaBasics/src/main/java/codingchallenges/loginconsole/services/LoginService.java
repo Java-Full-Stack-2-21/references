@@ -8,11 +8,9 @@ public class LoginService {
 
     public Boolean validateCredentials(String username, String password){
 
-        for(int i = 0; i < Database.accounts.length; i++){
-            if(Database.accounts[i] != null ) {
-                if (Database.accounts[i].getUsername().equals(username) && Database.accounts[i].getPassword().equals(password)) {
+        for(int i = 0; i < Database.accounts.size(); i++){
+            if (Database.accounts.get(i).getUsername().equals(username) && Database.accounts.get(i).getPassword().equals(password)) {
                     return true;
-                }
             }
         }
 
@@ -21,7 +19,7 @@ public class LoginService {
     }
 
     public void addUser(User user){
-        Database.accounts[Database.accountSize++] = user;
+        Database.accounts.add(user);
     }
 
 }

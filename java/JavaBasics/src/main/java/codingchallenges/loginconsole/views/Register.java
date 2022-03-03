@@ -25,7 +25,6 @@ public class Register {
         user.setLastname(sc.nextLine());
 
         loginService.addUser(user);
-        Login.view();
 
     }
 }
