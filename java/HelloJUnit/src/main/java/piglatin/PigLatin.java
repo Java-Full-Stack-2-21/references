@@ -25,7 +25,7 @@ public class PigLatin {
 
     public boolean isValidSentence(String sentence) {
         String[] words = sentence.split(" ");
-        Boolean isValid = false;
+        Boolean isValid = true;
 
         for(String word : words){//Hello
 

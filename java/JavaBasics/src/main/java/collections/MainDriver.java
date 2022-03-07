@@ -93,5 +93,25 @@ public class MainDriver {
 
         System.out.println(maps.containsKey(2));
 
+
+        Iterator<Integer> iterator = list.iterator();
+
+        while (iterator.hasNext()){
+            System.out.println(iterator.next());
+        }
+
+        for (Integer item : list){
+            System.out.println(item);
+        }
+
+        for(int i = 0; i < list.size(); i++){
+            System.out.println(list.get(i));
+        }
+
+        list.forEach(item -> {
+            System.out.println(item);
+        });
+
+
     }
 }
