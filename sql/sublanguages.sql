@@ -21,6 +21,7 @@
  * 		- grant, revoke
  * 	- TCL (Transaction Control Language)
  * 		- deals with when official commits happen to a database
+ * 		- keywords: savepoint, rollback
  * 
  * 	What is a transaction?
  * 		an official commit to a database
