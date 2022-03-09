@@ -67,6 +67,19 @@
  * 					- EXAMPLES: social security number, username, driver license numbers
  * 	- composite key: unique identifier is created based on two columns
  * 					- EXAMPLES: Teacher id and Student Id
+ * 
+ * 
+ * What is multiplicity?
+ * 		The relationship between tables.
+ * 
+ * There are four relationships:
+ * 	- one to one 
+ * 	- one to many
+ * 		- example: the many relationship will have the foreign key to the one
+ * 	- many to one
+ * 		- example: the many relationship will have the foreign key to the one
+ * 	- many to many
+ * 		- example: an external table is created that is a composite key between the two tables
  * */
 create table artists(
 	artist_id serial primary key,
@@ -119,6 +132,8 @@ create table albums(
 );
 
 insert into albums values (default, 'Section 80', 3);
+insert into albums values (default, 'To Pimp a Butterfly', 3);
+
 
 insert into albums values (default, 'End of the Lonely Hour', 5);
 
@@ -126,6 +141,30 @@ select * from albums;
 
 
 truncate albums;
+
+
+
+/*
+ * What is a join?
+ * 		merging of two table given a common column between them
+ * 
+ * 
+ * in this example, we are merging the artist table and album table given the common column
+ * between them which is the artist id column
+ * 
+ * 
+ * There are different types of joins
+ * - inner join: displays the matches between the two tables
+ * 		- will not have null values
+ * - left join: displays all of the values from the left table
+ * 		- will have null values from the right table
+ * - right join: display all of the values from the right table
+ * 		- will have null values from the left table
+ * - full join: display all of the values from both tables regardless of null values
+ * 		- will have null values from both
+ * */
+select a.artist_name, al.album_name from artists a 
+full join albums al on a.artist_id = al.artist_id_fk;
 
 
 
