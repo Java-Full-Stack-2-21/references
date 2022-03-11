@@ -5,6 +5,10 @@ import codingchallenges.loginconsole.db.Database;
 import codingchallenges.loginconsole.models.User;
 
 public class LoginService {
+    private static LoginService obj = null;
+
+    private LoginService() {}
+
     public Boolean validateCredentials(String username, String password){
 
         for(int i = 0; i < Database.accounts.size(); i++){
@@ -19,6 +23,15 @@ public class LoginService {
 
     public void addUser(User user){
         Database.accounts.add(user);
+    }
+
+
+    public static LoginService getInstance(){
+        if(obj == null){
+            obj = new LoginService();
+        }
+
+            return obj;
     }
 
 }

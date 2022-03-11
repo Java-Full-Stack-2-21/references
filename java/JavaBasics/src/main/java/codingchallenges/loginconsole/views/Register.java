@@ -7,7 +7,7 @@ import java.util.Scanner;
 
 public class Register {
     public static void view(){
-        LoginService loginService = new LoginService();
+        LoginService loginService = LoginService.getInstance();
         Scanner sc = new Scanner(System.in);
 
         User user = new User();

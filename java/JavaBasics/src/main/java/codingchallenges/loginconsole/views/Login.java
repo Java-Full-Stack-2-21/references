@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Login {
     public static void view(){
-        LoginService loginService = new LoginService();
+        LoginService loginService = LoginService.getInstance();
 
 
         Scanner sc = new Scanner(System.in);

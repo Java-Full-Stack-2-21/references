@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 public class Dashboard {
     public static void view(){
-        LoginService loginService = new LoginService();
+        LoginService loginService = LoginService.getInstance();
         Scanner sc = new Scanner(System.in);
 
         Boolean running = true;
