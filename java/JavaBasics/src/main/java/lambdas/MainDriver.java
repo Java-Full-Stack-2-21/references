@@ -22,5 +22,9 @@ public class MainDriver {
 
         FunctionalInterface f = (word, num) -> word.length() % 2 == 0 ? "EVEN" : "ODD";
 
+
+        FunctionalInterfaceImpl fii = new FunctionalInterfaceImpl();
+
+        FunctionalInterface f3 = fii::isEvenOrOdd;
     }
 }
