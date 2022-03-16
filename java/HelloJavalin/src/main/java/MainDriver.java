@@ -1,5 +1,6 @@
 import com.fasterxml.jackson.databind.ObjectMapper;
 import io.javalin.Javalin;
+import io.javalin.http.Context;
 import io.javalin.http.Handler;
 
 
@@ -148,8 +149,17 @@ public class MainDriver {
         });
 
 
+        app.get("/piglatin/{word}", MainDriver::pigLatin);
 
 
 
+
+
+    }
+
+    public static void pigLatin(Context context){
+        String word = context.pathParam("word");
+
+        context.json(new StringBuilder("").append(word.substring(1)).append(word.charAt(0)).append("ay"));
     }
 }

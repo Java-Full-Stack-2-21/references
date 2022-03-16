@@ -26,5 +26,7 @@ public class MainDriver {
         FunctionalInterfaceImpl fii = new FunctionalInterfaceImpl();
 
         FunctionalInterface f3 = fii::isEvenOrOdd;
+
+
     }
 }

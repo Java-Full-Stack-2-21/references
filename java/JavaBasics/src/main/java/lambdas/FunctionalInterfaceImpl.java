@@ -9,6 +9,7 @@ public class FunctionalInterfaceImpl implements FunctionalInterface{
         }
 
 
+
         return "ODD";
 
 

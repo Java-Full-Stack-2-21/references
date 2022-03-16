@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Hello HTML</title> <!-- this manipulates the text on the browser tab -->
+    </head>
+    <body>
+
+        <!-- action attribute -->
+        <form action="http://localhost:9000" method="POST">
+            <input type="text" name="user" id="username-input" placeholder="Username"/>
+            <br/>
+            <input type="password" name="password" id="password-uinput" placeholder="Password"/>
+            <input type="radio" name="cereal" value="milk-first">
+            <span>Milk First</span>
+            <input type="radio" name="cereal" value="cereal-first">
+            <span>Cereal First</span>
+            <br/>
+
+            <input type="checkbox" name="cerealbrands" value="lucky charms">
+            <span>Lucky Charms</span>
+            <input type="checkbox" name="cerealbrands" value="cheerios">
+            <span>Cheerios</span>
+            <br/>
+            <input type="date"/>
+
+            <input type="submit" value="BUTTON">
+        </form>
+
+
+        <!-- Header tags -->
+        <h1>Header 1</h1>
+        <h2>Header 2</h2>
+        <h3>Header 3</h3>
+        <h4>Header 4</h4>
+        <h5>Header 5</h5>
+        <h6>Header 6</h6>
+
+
+        <div>This is a div! :)</div> <!-- generalized block element -->
+        <div>
+            <div>div 1</div>
+            <div>div 2</div>
+        </div>
+
+        <span>Span Element</span> <!-- generalized inline element -->
+        <span>Span Element 2</span>
+
+        <!-- paragraph tag -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga natus magni aliquam quasi commodi. Id et, quae quisquam provident culpa doloremque cum asperiores, porro qui architecto saepe praesentium unde enim?</p> <!-- paragraph -->
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Qui id commodi ea excepturi nostrum, minima, aut dignissimos officiis corporis perspiciatis, quam velit. Voluptate saepe praesentium natus tempora dolorum dolor nihil laboriosam aut voluptatem excepturi dignissimos esse placeat tenetur corrupti a eum fuga id, voluptatum totam veniam perferendis. Repellat, accusantium voluptatum.</p>
+        <p>Lorem ipsum dolor sit amet.</p>
+
+        <a href="http://www.cupcakeipsum.com/">Cupcake Ipsum</a> <!-- a is for adding hyperlinks to your html -->
+
+
+        <table border="1"><!-- root tag for tables -->
+            <thead> <!-- where we add the header row -->
+                <tr> <!-- create a new row -->
+                    <th>Header 1</th> <!-- header columns -->
+                    <th>Header 2</th>
+                </tr>
+            </thead> 
+            <tbody> <!-- where the actual data goes -->
+                <tr>
+                    <td>row 1 col 1</td> <!-- data colums -->
+                    <td>row 1 col 2</td>
+                </tr>
+                <tr>
+                    <td>row 2 col 1</td>
+                    <td>row 2 col 2</td>
+                </tr>
+            </tbody>   
+        </table>
+
+        <!-- unordered list -->
+        <ul>
+            <li>item 1</li>
+            <li>item 2</li>
+            <ul>
+                <li>subitem 1</li>
+                <li>subitem 2</li>
+            </ul>
+        </ul>
+
+        <!-- order list -->
+        <ol>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ol>
+
+        <!-- displaying images -->
+        <!-- <img src="./image0.jpg" alt="oops image missing"> -->
+
+
+        <!-- displaying videos -->
+        <!-- <video src="./cats.mp4" controls></video> -->
+
+
+        
+
+    </body>
+</html>
+
+
+ <!-- 
+    What are the 3 languages related to web development?
+        - HTML
+            HyperText Markup Language
+            - defines the structure of the webpage
+        - CSS
+            - defines the styling of the structure
+        - JavaScript
+            - gives our webpage functionality
+
+    This is a comment btw... to write a comment in vs code, type "shift + alt + a"
+
+
+    HTML has some predefined tags:
+    <html>
+        <head>
+            is where meta data goes...
+        </head>
+        <body>
+            what the users actually see...
+        </body>
+    </html>
+
+    What is the difference between a block element and inline element?
+        - block elements
+            - always start with a new line
+            - take up the max width available
+        - inline elements
+            - dont start on a new line
+            - take up minimum width needed
+
+
+    What is an attribute?
+        additional information you can add onto an element
+        <div class="item" id="item-6"></div>
+    
+    common attributes:
+        - class - convention to identify an element with a grouping of elements
+        - id - convention to identify a unique element
+        - style - add css inline in the html file
+-->
