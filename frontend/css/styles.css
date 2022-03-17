@@ -1,0 +1,88 @@
+
+/* external */
+/* this selector gets all elements with the class = square */
+.square{
+    color: black; /* changes the text color */
+    background-color: rgb(113, 183, 204); /* change the background color of an element */
+    width: 200px; /* declaring width of element */
+    height: 200px; /* declaring height of element */
+    border-radius: 6px; /* changes how round your corners */
+    /* box-shadow: 2px 2px 8px black; *//* offset-x | offset-y | blur-radius | spread-radius | color */
+
+    text-align: center;
+
+
+    /* box model properties */
+    padding: 5px;  
+    margin: 10px;
+    border: 2px solid black;  
+
+}
+
+/* this selector gets an element with the id only-btn */
+#only-btn{
+    border: none;
+    background-color: rgb(54, 115, 195);
+    color: white;
+    padding: 5px;
+    width: 200px;
+    height: 50px;
+    font-size: 20px;
+    border-radius: 6px;
+    box-shadow: 2px 2px 4px gray;
+    cursor: pointer;
+
+
+    /* how to position something anywhere on the page */
+    /* position: fixed;
+    top: 5px;
+    right: 5px; */
+}
+
+
+/* this selector gets all elements that are buttons */
+button {
+    padding: 5px;
+    border-radius: 6px;
+    border: none;
+    background-color: rgb(112, 167, 212);
+    color: white;
+    cursor: pointer;
+}
+
+
+.container{
+    display: flex;
+    padding: 10px;
+    /* background-color: black; */
+    justify-content: space-evenly; /* spaces the children in the container evenly */
+   /*  justify-content: flex-start; */
+   /* justify-content: flex-end; */
+   /* justify-content: space-between; */
+   flex-wrap: wrap;
+}
+
+
+.login-form{
+    margin-top: 200px;
+    padding: 15px;
+    width: 400px;
+    background-color: rgb(180, 180, 180);
+    border-radius: 8px;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+/* selector to retrieve all of the inputs inside of a login form */
+.login-form input{
+    margin-bottom: 5px;
+    padding: 5px;
+}
+
+
+button:hover{
+    background-color: rgb(0, 76, 255);
+    transition: 1s;
+}
