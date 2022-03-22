@@ -1,0 +1,71 @@
+html, body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+}
+
+#container{
+    display: flex;
+}
+
+#list-container{
+    padding: 10px;
+    padding-top: 30px;
+    padding-right: 15px;
+    width: 200px;
+    height: 300px;
+    background-color: bisque;
+
+    overflow-y: scroll;
+}
+
+.display-btn{
+    background-color: rgba(0,0,0,0);
+    border: none;
+    width: 100%;
+    cursor: pointer
+}
+
+.display-btn:hover{
+    background-color: rgba(0,0,0,.1);
+}
+
+
+#card-container{
+    width: 100%;
+    background-color: beige;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+#poke-search{
+    width: 140px;
+    position: fixed;
+
+    top: 10px;
+    left: 10px;
+}
+
+
+#card{
+    background-color: rgb(26, 102, 165);
+    margin-top: 25px;
+    padding: 10px;
+    border: 6px gold solid;
+    width: 175px;
+    height: 225px;
+
+    border-radius: 6px;
+}
+
+#poke-name{
+    margin-top: 10px;
+    text-align: center;
+    text-transform: capitalize;
+    font-weight: bold;
+}
+
+#img-container{
+    height: 100px;
+    display: flex;
+    justify-content: space-evenly;
+}
