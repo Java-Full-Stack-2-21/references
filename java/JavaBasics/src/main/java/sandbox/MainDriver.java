@@ -1,33 +1,29 @@
 package sandbox;
 
 public class MainDriver {
-    static int[] sort(int[] arr){ //instance scope
-        for(int i = 0; i < arr.length; i++){
-            for(int j = 0; j < arr.length - 1; j++){
-
-                //if you have to swap two numbers in an array, this is usually how its done.
-                if(arr[j] > arr[j+1]){
-                    int temp = arr[j];
-                    arr[j] = arr[j+1];
-                    arr[j+1] = temp;
-                }
-            }
-        }
-
-        return arr;
-    }
-
 
     public static void main(String[] args) { //static scope
-        int[] arr = {5, 4, 3, 2, 1};
-        int[] arr2 = {6, 4, 3, 2, 1};
-        int[] arr3 = {7, 4, 3, 2, 1};
+        int x = 3;
 
-        arr = sort(arr);
-        arr2 = sort(arr2);
-        arr3 = sort(arr3);
+        int y = 5;
 
+        int z = sum(7, 12);
 
+        String firstAndLastName = combineTwoWords("Kevin", "Childs");
+
+        System.out.println(firstAndLastName);
     }
+
+
+    //method is a block of reusable
+    static int sum(int num1, int num2){
+        return num1 + num2;
+    }
+
+    static String combineTwoWords(String firstName, String lastName){
+        return firstName + lastName;
+    }
+
+
 
 }
