@@ -9,8 +9,8 @@ import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import java.io.File;
 
 public class S3Service {
-    private String awsId = "AKIA4LP63UU2F4QUOGTH";
-    private String secretKey = "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";
+    private String awsId = "";
+    private String secretKey = "";
     private String region = "us-east-2";
     private String bucketName = "krc-s3-bucket";
 
