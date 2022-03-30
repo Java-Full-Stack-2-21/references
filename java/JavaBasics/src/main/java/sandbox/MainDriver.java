@@ -4,9 +4,7 @@ public class MainDriver {
 
     public static void main(String[] args) { //static scope
         int x = 3;
-
         int y = 5;
-
         int z = sum(7, 12);
 
         String firstAndLastName = combineTwoWords("Kevin", "Childs");
@@ -23,7 +21,4 @@ public class MainDriver {
     static String combineTwoWords(String firstName, String lastName){
         return firstName + lastName;
     }
-
-
-
 }

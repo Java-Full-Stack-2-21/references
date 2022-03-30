@@ -1,0 +1,52 @@
+<?xml version = "1.0" encoding = "UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xmlns:context="http://www.springframework.org/schema/context"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
+
+
+    <!--
+        Spring utilizes this idea of an IOC container...
+            - How and What is a Spring bean is dependent on the configurations of this file
+    -->
+
+<!--    <bean name="videoGameDao" class="repos.VideoGameDaoImpl"/>-->
+
+    <!--
+        Types of injection:
+            - setter injection (through getters and setters)
+            - constructor injection (through the constructor)
+    -->
+
+    <!-- constructor injection -->
+<!--    <bean name="videoGameService" class="services.VideoGameService">-->
+<!--        <constructor-arg index="0" ref="videoGameDao"/>-->
+<!--    </bean>-->
+
+    <!-- setter injection -->
+<!--    <bean name="videoGameService" class="services.VideoGameService">-->
+<!--        <property name="videoGameDao" ref="videoGameDao"/>-->
+<!--    </bean>-->
+
+    <!--
+        Autowiring our beans
+            - byType: spring will autowire by data types (setter inject by datatype in the parameter)
+            - byName: spring will autowire by the setter name (setter inject by the method name of the setter)
+            - constructor: spring will autowire by constructor (constructor injection)
+    -->
+
+    <!--autowiring byType-->
+<!--    <bean name="videoGameService" class="services.VideoGameService" autowire="byType"/>-->
+
+    <!-- autowiring byName -->
+    <!--    <bean name="videoGameService" class="services.VideoGameService" autowire="byName"/>-->
+
+    <!-- autowiring by constructor-->
+<!--    <bean name="videoGameService" class="services.VideoGameService" autowire="constructor"/>-->
+
+    <context:annotation-config/>
+    <context:component-scan base-package="repos"/>
+    <context:component-scan base-package="services"/>
+</beans>
