@@ -26,4 +26,5 @@ public class Song {
     @JsonIgnoreProperties({"songs"}) //this is the variable name of the songs variable inside of the album class
     private Album album;
 
+
 }
