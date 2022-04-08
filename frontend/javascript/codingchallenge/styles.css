@@ -1,0 +1,16 @@
+body{
+    margin: 0px;
+}
+
+#canvas{
+    width: 100vw;
+    height:  100vh;
+    background-color: black;
+}
+
+#swap{
+    position: fixed;
+    background-color: white;
+    top: 0px;
+    left: 0px;
+}
