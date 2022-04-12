@@ -1,0 +1,17 @@
+
+
+
+<!-- Interpolation -->
+<h2>Interpolation Example</h2>
+<div>{{interpolationVariable}}</div>
+
+<!-- property binding -->
+<h2>Property Binding</h2>
+<div [innerHTML]="propertyBindingVariable"></div>
+<div [attr.id]="idVal">Check my id</div>
+<div [class.bgColor]="isPink">Am I Pink?</div>
+
+
+<!-- event binding -->
+<h2>Event Binding</h2>
+<button (click)="createAlert()" [innerText]="isPink ? 'Turn Pink Off' : 'Turn Pink On'">Alert!</button>
