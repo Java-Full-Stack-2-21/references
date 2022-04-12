@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { GenericService } from 'src/app/services/generic.service';
 
 @Component({
   selector: 'app-two',
@@ -7,7 +8,10 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TwoComponent implements OnInit {
 
-  constructor() { }
+  arr : Array<number> = [64,43,12,72,23];
+
+  //referencing the generic service in the one and two component
+  constructor(private genericService : GenericService) { }
 
   ngOnInit(): void {
   }
