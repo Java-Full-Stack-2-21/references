@@ -1,0 +1,45 @@
+
+<!-- 
+    A directive is a custom keyword intrudced to the html page
+    - Component Directive
+        <onewaybinding></onewaybinding>  <-- this tag doesnt exist in normal html, this is a directive
+    - Attribute Directives
+        - ngClass - can add and remove multiple CSS classes
+        - ngStyle - can add and remove multiple css properties
+        - ngModel - used for two way binding
+    - Structural Directives
+        - *ngIf
+        - *ngFor
+
+ -->
+
+<!-- attribute directives -->
+
+<div [ngClass]="classes">Do I have the special classes?</div>
+
+<div [ngStyle]="styles">Do I have the special styling?</div>
+
+<button (click)="toggleBackgroundColor()">Toggle Color</button>
+
+
+<!-- structural directives -->
+
+<!-- *ngIf -->
+<!-- If isVisible is true, then this element is going to display -->
+<div *ngIf="isVisible">YES I AM</div>
+
+<div *ngIf="!isVisible">NO IM NOT</div>
+
+<div *ngFor="let name of names">
+    <div>Name: {{name}}</div>
+</div>
+
+
+
+
+
+<!-- <div *ngIf="isVisible; then trueDiv else falseDiv"></div>
+
+<ng-template #trueDiv><h2>YES I AM</h2></ng-template>
+
+<ng-template #falseDiv><h2>NO IM NOT :(((</h2></ng-template> -->

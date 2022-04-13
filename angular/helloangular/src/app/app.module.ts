@@ -9,6 +9,7 @@ import { TwowaybindingComponent } from './binding/twowaybinding/twowaybinding.co
 import { FormsModule } from '@angular/forms';
 import { PipeexampleComponent } from './pipes/pipeexample/pipeexample.component';
 import { PiglatinPipe } from './pipes/piglatin.pipe';
+import { DirectiveexampleComponent } from './directives/directiveexample/directiveexample.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +19,8 @@ import { PiglatinPipe } from './pipes/piglatin.pipe';
     OnewaybindingComponent,
     TwowaybindingComponent,
     PipeexampleComponent,
-    PiglatinPipe
+    PiglatinPipe,
+    DirectiveexampleComponent
   ],
   imports: [
     BrowserModule,
