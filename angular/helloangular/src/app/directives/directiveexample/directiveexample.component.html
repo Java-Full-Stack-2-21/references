@@ -7,9 +7,10 @@
         - ngClass - can add and remove multiple CSS classes
         - ngStyle - can add and remove multiple css properties
         - ngModel - used for two way binding
-    - Structural Directives
-        - *ngIf
-        - *ngFor
+    - Structural Directive
+        structural directives modify the structure of the html page
+        - *ngIf : will display / remove an element based on a boolean condition
+        - *ngFor : will loop through an array and you can give an html structure to each element
 
  -->
 
@@ -30,6 +31,9 @@
 
 <div *ngIf="!isVisible">NO IM NOT</div>
 
+
+<!-- *ngFor -->
+<!-- name will represent one name in the list of names in the names variable -->
 <div *ngFor="let name of names">
     <div>Name: {{name}}</div>
 </div>

@@ -1,0 +1,8 @@
+<div class="parent">
+    <h2>Parent Component</h2>
+
+    <input type="text" [(ngModel)]="inputFromParent">
+
+    <button (click)="toggleChild()">Toggle Child</button>
+    <app-child *ngIf="isVisible" [variableInChild]="inputFromParent"></app-child>
+</div>

@@ -1,0 +1,21 @@
+.center{
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.pokeItem{
+    border: none;
+    width: 80%;
+    background-color: rgb(58, 101, 231);
+    color: white;
+    margin-top: 5px;
+    padding: 5px;
+    border-radius: 6px;
+    transition: .5s;
+}
+
+.pokeItem:hover{
+    background-color: rgb(58, 72, 231);
+    transition: .5s;
+}

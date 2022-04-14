@@ -10,6 +10,8 @@ import { FormsModule } from '@angular/forms';
 import { PipeexampleComponent } from './pipes/pipeexample/pipeexample.component';
 import { PiglatinPipe } from './pipes/piglatin.pipe';
 import { DirectiveexampleComponent } from './directives/directiveexample/directiveexample.component';
+import { ParentComponent } from './lifcecyclehooks/parent/parent.component';
+import { ChildComponent } from './lifcecyclehooks/child/child.component';
 
 @NgModule({
   declarations: [
@@ -20,7 +22,9 @@ import { DirectiveexampleComponent } from './directives/directiveexample/directi
     TwowaybindingComponent,
     PipeexampleComponent,
     PiglatinPipe,
-    DirectiveexampleComponent
+    DirectiveexampleComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
