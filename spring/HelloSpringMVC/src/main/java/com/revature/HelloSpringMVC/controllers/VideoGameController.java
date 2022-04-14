@@ -29,6 +29,7 @@ import java.util.List;
 * ResponseEntity: Allows us to manipulate all aspects of an http response
 * */
 @RestController
+@CrossOrigin(origins = {"http://localhost:4200"}, allowCredentials = "true")
 public class VideoGameController {
 
     Logger logger = Logger.getLogger(VideoGameController.class);

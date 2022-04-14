@@ -1,3 +1,4 @@
+import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 
 @Injectable({
@@ -15,7 +16,7 @@ export class GenericService {
   
   */
 
-  constructor() { }
+  constructor(private httpCli : HttpClient) { }
 
   sortArr(arr : Array<number>) : Array<number> {
       return arr.sort(function(a : number,b : number){
@@ -25,5 +26,28 @@ export class GenericService {
               return -1;
             }
       });
+  }
+
+  login(name: string, description: string, platform: string){
+    return this.httpCli.post<any>(`http://localhost:9000/session`, {
+       "name": name,
+       "description": description,
+       "platform": platform
+    }
+    , {
+      withCredentials: true
+    });
+  }
+
+  checkSession(){
+    return this.httpCli.get<any>('http://localhost:9000/session', {
+      withCredentials: true
+    });
+  }
+
+  logout(){
+    return this.httpCli.delete<any>('http://localhost:9000/session', {
+      withCredentials: true
+    });
   }
 }

@@ -12,6 +12,7 @@ import javax.servlet.http.HttpSession;
 //http://localhost:9000/session
 @RestController
 @RequestMapping(value = "session")
+@CrossOrigin(origins = {"http://localhost:4200"}, allowCredentials = "true") // you need to add cross origin to allow other servers to send request to your server
 public class SessionController {
 
     //http://localhost:9000/session POST

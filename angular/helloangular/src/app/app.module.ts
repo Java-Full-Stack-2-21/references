@@ -12,6 +12,8 @@ import { PiglatinPipe } from './pipes/piglatin.pipe';
 import { DirectiveexampleComponent } from './directives/directiveexample/directiveexample.component';
 import { ParentComponent } from './lifcecyclehooks/parent/parent.component';
 import { ChildComponent } from './lifcecyclehooks/child/child.component';
+import { CorsexampleComponent } from './cors/corsexample/corsexample.component';
+import {HttpClientModule} from '@angular/common/http'
 
 @NgModule({
   declarations: [
@@ -24,11 +26,13 @@ import { ChildComponent } from './lifcecyclehooks/child/child.component';
     PiglatinPipe,
     DirectiveexampleComponent,
     ParentComponent,
-    ChildComponent
+    ChildComponent,
+    CorsexampleComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]
