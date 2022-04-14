@@ -16,4 +16,6 @@ export class ApiService {
   getOnePokemon(pokeName : string){
     return this.httpCli.get<Pokemon>(`https://pokeapi.co/api/v2/pokemon/${pokeName}`);
   }
+
+  
 }
