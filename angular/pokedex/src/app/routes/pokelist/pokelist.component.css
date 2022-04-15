@@ -19,3 +19,7 @@
     background-color: rgb(58, 72, 231);
     transition: .5s;
 }
+
+.center button{
+    text-transform: capitalize;
+}

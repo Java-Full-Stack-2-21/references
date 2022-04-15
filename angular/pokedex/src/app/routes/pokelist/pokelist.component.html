@@ -1,3 +1,4 @@
 <div class="container center">
-    <button *ngFor="let pokemon of pokemons" class="pokeItem" (click)="goToPokemon($event)">{{pokemon.name}}</button>
+    <input type="text" [(ngModel)]="filterInput"/>
+    <button *ngFor="let pokemon of filteredPokemon" class="pokeItem" (click)="goToPokemon($event)">{{pokemon.name}}</button>
 </div>

@@ -1,1 +1,22 @@
-<p>pokecard works!</p>
+<div class="pokeContainer">
+    <div *ngIf="this.pokemon" class="pokeCard">
+        <!-- name div -->
+        <h3>{{this.pokemon.name}}</h3>
+
+        <!-- img div -->
+        <div class="img-container">
+            <img (click)="changeImg()" [src]="this.currentImg" alt="pokemon image"/>
+        </div>
+
+        <!-- types div -->
+        
+        <div class="types-container">
+            <h4>Types</h4>
+            <div *ngFor="let item of this.pokemon.types">{{item.type.name}}</div>
+        </div>
+    </div>
+</div>
+
+<div class="next-btn-container">
+    <button class="btn btn-primary" (click)="getOnePokemonGivenId()">Next Pokemon</button>
+</div>

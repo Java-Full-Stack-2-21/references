@@ -1,0 +1,41 @@
+.pokeContainer{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.pokeCard{
+    width: 200px;
+
+    background-color: rgb(75, 106, 230);
+    border: 7px goldenrod solid;
+    border-radius: 8px;
+    margin-top: 50px;
+    padding: 10px;
+}
+
+
+.pokeCard h3{
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.img-container{
+    display: flex;
+    justify-content: center;
+}
+
+.img-container img{
+    width: 70%;
+}
+
+.types-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.next-btn-container{
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+}
