@@ -1,0 +1,36 @@
+Frontend:
+	1: utilizes the environment folder if there are variables that are for deployment
+		- environment.ts is for development
+		- environment.prod.ts is for when you build the project with ngbuild
+	2: ng build
+		- packaged the entire project into 4 or 5 files
+		- these files are located in the dist folder
+	3: place contents in dist folder into an s3 bucket that can host static pages.
+		- you can enable static hosting under the properties tab in the s3 instance
+
+Backend:
+	1: utilize environment variables if some value are going to change for deployment
+		- if its a java file, you can use System.getenv(ENV GOES HERE);
+		- if its the application.properties file, you can use ${ENV VARIABLE GOES HERE}
+		- if its anything else, GOOGLE
+	2: create an ec2 instance (I used ubuntu free tier for this example)
+		- to remotely access the virtual machine:
+			- ssh -i [LOCATION OF YOUR PEM FILE] ubuntu@[EC2_PUBLIC_IP]
+			- you can also add an ssh configuration in the file ~/.ssh/config
+	3: update the security group to open up the port that your server is going to run on
+		- you can go to the security group by click the link under security when you are looking at the ec2 details
+	4: add environment variables needed for the ec2
+		- modify the file in ~/.bashrc and add the following command
+			- export [ENV_NAME]=[ENV_VALUE]
+			- if you have more than one environment variable, youll be doing the above command multiple times
+	5: install the following programs to your EC2
+		- jdk
+		- mvn
+		- git
+			- NOTE: run sudo apt update before installing
+	5: clone the project to the ec2
+	6: go to the directory that is the project is at in the ec2 and run "mvn package"
+		- this creates a java executable in jar format
+	7: run the jar file in the background
+		- nohup java -jar [location of jar file] &
+	
