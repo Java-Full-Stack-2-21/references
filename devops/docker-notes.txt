@@ -18,6 +18,9 @@ What is a Dockerfile?
 What is a Docker Image?
 	- A Docker image has everything needed to run your application (filesystem, libraries, dependencies...etc)
 
+What is the Docker Daemon?
+	- The daemon holds your docker images and containers. think of it as the brain.
+
 A Docker container runs your docker image
 
 
