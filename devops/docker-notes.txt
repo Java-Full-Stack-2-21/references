@@ -1,0 +1,34 @@
+What is Docker?
+	- a platform for running applications utilizing the idea of a container
+
+
+What is a container?
+	- a container bundles up the libraries needed to run your application
+	- a container is much more lightweight than a virtual machine
+
+
+3 concepts we need to understand
+	- Dockerfile
+	- Docker Image
+	- Docker Container
+
+What is a Dockerfile?
+	- A file that contains the instructions needed to get all the resources needed to create a docker image
+
+What is a Docker Image?
+	- A Docker image has everything needed to run your application (filesystem, libraries, dependencies...etc)
+
+A Docker container runs your docker image
+
+
+A Dockerfile generates your Docker Image
+A Docker Image is ran on your Docker Container
+
+
+Common docker commands:
+	- docker images: list all of your local images
+	- docker build -t todobackend .    : builds docker image from Dockerfile
+	- docker run -p 9000:9000 todobackend : runs the specified docker image in a new container
+	- docker stop [CONTAINER_ID] : stops container
+	- docker start [CONTAINER_ID] : starts container
+	- docker rm [CONTAINER_ID] : rm docker container
